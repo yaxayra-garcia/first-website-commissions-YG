@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New Builds | J's Construction</title>
+  <style>
+    nav {
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+    }
+
+  nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 70px; /* bigger logo */
+  width: auto;
+  object-fit: contain;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 auto; /* center the nav */
+  padding: 0;
+  display: flex;
+  gap: 40px;
+}
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 0.75rem 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li:hover > a {
+      color: #006aff; /* Blue on hover */
+      background-color: transparent;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      display: none;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .dropdown a:hover {
+      background-color: #f2f2f2;
+      color: #007BFF;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+      margin-bottom: none;
+    }
+
+    .section h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    .service-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.service-item {
+   width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-item h3 {
+  margin: 15px 0;
+  color: #333;
+}
+    body {
+      font-family: "Lato", sans-serif;
+      margin: 0;
+      padding: 100px 40px 40px;
+      background-color: #fafafa;
+    }
+    h1 {
+      color: #333;
+    }
+    
+    header {
+      background-color: #006aff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .pin {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+
+    }
+        .pin:hover {
+      transform: scale(1.03);
+    }
+
+    .pin img {
+      width: 100%;
+      display: block;
+    }
+
+    .pin .description {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <img src="logoOption1.jpg" alt="Logo" class="logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#services">Services ▾</a>
+        <ul class="dropdown">
+          <li><a href="residential.html">Residential</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+          <li><a href="landscaping.html">Landscaping</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+    <div class="board">
+      <div class="pin">
+      <img src="renovations.jpg" alt="Build 1">
+      </div>
+      <div class="pin">
+      <img src="build2.jpeg" alt="Build 2">
+      </div>
+      <div class="pin">
+      <img src="build3.jpeg" alt="Build 3">
+      </div>
+      <div class="pin">
+      <img src="build4.jpeg" alt="Build 4">
+     </div>
+    </div>
+    <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@jsconstruction.com<br>Phone: (602)413-8232</p>
+     <p>Find us on: <a href="https://www.yelp.com/biz/js-construction-and-landscape-phoenix?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)">Yelp | </a>  <a href = "https://nextdoor.com/p/YR8C5hrGPxQb?utm_source=share&extras=MTEyMjE2NjE5&ne_link_preview_links=&utm_campaign=1749869090257&share_action_id=756a7a6c-a061-4176-9817-898b51b43ab5"> nextdoor | </a> <a href = "https://www.instagram.com/jsconstructionandlandscaping/"> Instagram</a></p>
+  </div>
+   <footer>
+    &copy; 2025 J's Construction LLC. All rights reserved.
+  </footer>
+</body>
+</html>
