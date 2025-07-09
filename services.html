@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New Builds | J's Construction</title>
+  <style>
+    /* General Reset + Font */
+    body {
+      font-family: "Lato", sans-serif;
+      margin: 0;
+      padding: 100px 40px 40px;
+      background-color: #fafafa;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 10px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      height: 70px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      gap: 40px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 0.75rem 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li:hover > a {
+      color: #006aff;
+      background-color: transparent;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      display: none;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .dropdown a:hover {
+      background-color: #f2f2f2;
+      color: #007BFF;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    /* Sections */
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Slider Styles */
+    .slider {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 400px; /* Adjust as needed */
+      object-fit: cover;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      border-radius: 10px;
+}
+
+    .slider img.active {
+      display: block;
+    }
+
+    .slider button.prev,
+    .slider button.next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255,255,255,0.7);
+      border: none;
+      padding: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    .slider button.prev {
+      left: 10px;
+    }
+
+    .slider button.next {
+      right: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    /* Contact Section */
+    #contact p a {
+      color: #006aff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-container">
+    <img src="logoOption1.jpg" alt="Logo" class="logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Backyard Projects Slider -->
+<div class="section" id="backyard">
+  <h2>Backyard Projects</h2>
+  <div class="slider" id="slider-backyard">
+    <img src="backyard&poolreno1.JPG" alt="Backyard 1">
+    <img src="backyardbar&kitchen1.JPG" alt="Backyard 2">
+    <img src="backyardrenovationview6.JPG" alt="Backyard 3">
+    <img src="backyardtileinstallation.JPG" alt="Backyard 4">
+    <img src="front&backyardrenovation10.JPG" alt="Landscaping">
+    <button class="prev" onclick="changeSlide('slider-backyard', -1)">&#10094;</button>
+    <button class="next" onclick="changeSlide('slider-backyard', 1)">&#10095;</button>
+  </div>
+</div>
+
+<!-- General Projects Slider -->
+<div class="section" id="general">
+  <h2>General Projects</h2>
+  <div class="slider" id="slider-general">
+    <img src="roofextension.JPG" alt="General 1">
+    <img src="brickflooring.JPG" alt="General 2">
+    <img src="front&backyardrenovation1.JPG" alt="General 3">
+    <img src="newbuilds.jpg" alt="General 4">
+    <img src="walk_inShower2.JPG" alt="Residential">
+    <button class="prev" onclick="changeSlide('slider-general', -1)">&#10094;</button>
+    <button class="next" onclick="changeSlide('slider-general', 1)">&#10095;</button>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@jsconstruction.com<br>Phone: (602) 413-8232</p>
+  <p>Find us on:
+    <a href="https://www.yelp.com/biz/js-construction-and-landscape-phoenix?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)">Yelp</a> |
+    <a href="https://nextdoor.com/p/YR8C5hrGPxQb?utm_source=share&extras=MTEyMjE2NjE5">Nextdoor</a> |
+    <a href="https://www.instagram.com/jsconstructionandlandscaping/">Instagram</a>
+  </p>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 J's Construction LLC. All rights reserved.
+</footer>
+
+<!-- JavaScript Slider Logic -->
+<script>
+  const currentIndexes = {};
+
+  function showSlide(sliderId, index) {
+    const slider = document.getElementById(sliderId);
+    const images = slider.querySelectorAll('img');
+    if (!currentIndexes[sliderId]) currentIndexes[sliderId] = 0;
+
+    if (index >= images.length) currentIndexes[sliderId] = 0;
+    else if (index < 0) currentIndexes[sliderId] = images.length - 1;
+    else currentIndexes[sliderId] = index;
+
+    images.forEach((img, i) => {
+      img.classList.toggle('active', i === currentIndexes[sliderId]);
+    });
+  }
+
+  function changeSlide(sliderId, direction) {
+    if (currentIndexes[sliderId] == null) currentIndexes[sliderId] = 0;
+    showSlide(sliderId, currentIndexes[sliderId] + direction);
+  }
+
+  window.onload = function () {
+    document.querySelectorAll('.slider').forEach(slider => {
+      const id = slider.id;
+      showSlide(id, 0);
+    });
+  };
+</script>
+</body>
+</html>
