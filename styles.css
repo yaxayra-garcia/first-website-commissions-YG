@@ -307,3 +307,59 @@ label {
 .form-message.show {
   display: block;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Form */
+  form {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+
+  .input-control,
+  .contact-msg {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .btn-submit {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* Navigation */
+  nav {
+    padding: 10px 20px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .logo {
+    height: 50px;
+  }
+}
